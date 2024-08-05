@@ -1,0 +1,23 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.tip-btn:hover,
+.tip-btn:focus,
+.tip-btn.active {
+    background-color: #26c2ae;
+    color: #00474b;
+}
+
+#people:invalid {
+    border-color: #e17052;
+}
+
+#calc-tip,
+#calc-total {
+    color: rgb(72, 188, 164)
+}
+
+#people:invalid::placeholder {
+    color: #e17052;
+}
