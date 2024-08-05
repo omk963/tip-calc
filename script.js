@@ -68,12 +68,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     resetButton.addEventListener('click', () => {
         resetTip()
-        tipValue = parseFloat(customTipInput.value) || 0
+        tipValue = 0
         peopleError.classList.add('hidden')
         billInput.value = ''
         peopleInput.value = ''
+        customTipInput.value = ''
         peopleInput.classList.remove('bg-red-100')
-        calculateTip()
+        updateDisplay(0, 0)
     })
 
 
@@ -82,8 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.classList.remove('active')
             btn.classList.replace('bg-teal-400', 'bg-teal-700')
             btn.classList.replace('text-teal-900', 'text-white')
-            customTipInput.classList.remove('border-2')
-            customTipInput.classList.remove('border-teal-700')
         })
+        customTipInput.classList.remove('border-2');
+        customTipInput.classList.remove('border-teal-700');
     }
 })
